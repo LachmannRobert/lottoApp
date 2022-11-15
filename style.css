@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+}
+
+body {
+  background-image: url('bg-photo.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  margin: 50px 0;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 5rem;
+}
+
+@media (max-width: 640px) {
+  h2 {
+    margin: 35px 0;
+    font-size: 4rem;
+  }
+}
+
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 500px;
+  margin: 0 auto 50px;
+}
+
+@media (max-width: 640px) {
+  .result {
+    width: 90%;
+    margin: 0 auto 35px;
+}
+}
+
+.ball {
+  width: 63px;
+  height: 63px;
+  background-color: yellow;
+  background: radial-gradient(circle at 35% 30%, #fbfb35 2%, #fbfb35 17%, #e3e012 40%, rgb(46, 45, 4) 100%);
+  border-radius: 50%;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 63px;
+}
+
+@media (max-width: 640px) {
+  .ball {
+    width: 45px;
+    height: 45px;
+    font-size: 2rem;
+    line-height: 45px;
+  }
+}
+
+.active {
+  background: radial-gradient(circle at 35% 30%, rgb(255, 70, 70) 2%, #ff0000 17%, #ff0000 40%, rgb(0, 0, 0) 100%);
+  color: #fff;
+  font-weight: 600;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+button {
+  width: 250px;
+  padding: 10px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border: 1px solid #000;
+}
+
+@media (max-width: 640px) {
+  button {
+  width: 220px;
+  padding: 10px;
+  margin-bottom: 35px;
+  font-size: 1.75rem;
+
+}
+}
