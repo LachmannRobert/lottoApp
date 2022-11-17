@@ -34,7 +34,7 @@ const render = () => {
       scoreId.classList.add('active');
     };
     again();
-  }, 100);
+  }, 1500);
 };
 
   const again = () => {
