@@ -13,23 +13,18 @@ const lottoApp = () => {
     newBallDiv.textContent = `${i+1}`;
   };
 
-  const start = () => {
-    scoreArray.splice(0);
-    btn.textContent = 'Losuję ...';
-    for (let i = 0; i < 6; i++) {
-      const score = Math.floor(Math.random() * 49 + 1);
-      if (!scoreArray.includes(score)) {
-        scoreArray.push(score);
-        if (scoreArray.includes(49)) {
-          scoreArray.push(score);
-        };
-      } else {
-        scoreArray.push(score+1);
-      };
+const start = () => {
+  scoreArray.splice(0);
+  btn.textContent = 'Losuję ...';
+  for (let i = 0; i < 12; i++) {
+    const score = Math.floor(Math.random() * 49 + 1);
+    if (!scoreArray.includes(score) && scoreArray.length <= 5) {
+      scoreArray.push(score);
     };
-    console.log(scoreArray.sort((a,b) => a-b));
-    render();
   };
+  console.log(scoreArray.sort((a,b) => a-b));
+  render();
+};
 
 const render = () => {
   setTimeout(() => {
@@ -39,7 +34,7 @@ const render = () => {
       scoreId.classList.add('active');
     };
     again();
-  }, 2500);
+  }, 100);
 };
 
   const again = () => {
